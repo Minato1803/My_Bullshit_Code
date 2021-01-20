@@ -3,27 +3,20 @@ using namespace std;
 void nhapn( int & n)
 {
 	int d=0;
-	cout<<"nhap n";
+	cout<<"nhap n: ";
 	cin>>n;
 	
 	for(;n<1;)
 	{
-	n=n/10;
-	
-	d++;
-	}
-	
-	if(d!=2)
-	{ cout<<"nhap lai n:";
-	cin>>n;
-	
+		n=n/10;
+		d++;
 	}
 	
 	
 		
 	
 	}
-void dao(int&n)
+int dao(int n)
 {
 	int i,a;
 	i=n%10;
@@ -31,7 +24,7 @@ void dao(int&n)
 	i=i*10;
 	n=a+i;
 	cout<<"dao n la:"<<n;
-	
+	return n;	
 	
 }
 int ktnguyento(int &n)
@@ -49,7 +42,7 @@ int ktnguyento(int &n)
 		cout<<n<<" la so nguyen to";
 	}
 	else 
-	cout<<n<<" ko la so nguyen to";
+		cout<<n<<" ko la so nguyen to";
 }
 	
 
@@ -60,9 +53,8 @@ int main()
 	nhapn(n);
 	ktnguyento(n);
 	cout<<endl;
-	dao(n);
-	cout<<endl;
-	
+	n = dao(n);
+	cout<<endl;	
 	ktnguyento(n);
 	
 	
